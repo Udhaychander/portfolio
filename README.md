@@ -1,37 +1,64 @@
-Udhay Chander Bharatha — Portfolio
+# Udhay Chander Bharatha — Portfolio
 
-Personal portfolio website built with React & Node.js/Express
+> Personal portfolio website built with React & Node.js/Express
 
-About
+![React](https://img.shields.io/badge/React-18.2-61DAFB?style=flat&logo=react&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-Express-339933?style=flat&logo=node.js&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-6-CA4245?style=flat&logo=react-router&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=flat)
+
+---
+
+## Live Demo
+
+🌐 **[udhaychander.vercel.app](https://udhaychander.vercel.app)**
+
+---
+
+## About
+
 A full-stack portfolio showcasing my experience, projects, and skills as a Software Engineer. Built with a React frontend and a Node.js/Express backend serving portfolio data via REST API.
 
-Pages
-RouteDescription/Hero, stats, featured projects, skills overview/experienceInteractive work history with tabbed timeline/projectsFilterable project cards with expandable details/educationAcademic background and full skills breakdown/contactContact form with live backend submission
+---
 
-Tech Stack
-Frontend
+## Pages
 
-React 18
-React Router v6 (client-side routing)
-CSS (custom design system, no UI library)
-Google Fonts — Syne + DM Mono + DM Sans
+| Route | Description |
+|---|---|
+| `/` | Hero, stats, featured projects, skills overview |
+| `/experience` | Interactive work history with tabbed timeline |
+| `/projects` | Filterable project cards with expandable details |
+| `/education` | Academic background and full skills breakdown |
+| `/contact` | Contact form with live backend submission |
 
-Backend
+---
 
-Node.js + Express
-REST API serving portfolio data
-Nodemailer (contact form)
-CORS enabled for cross-origin requests
+## Tech Stack
 
+**Frontend**
+- React 18
+- React Router v6 (client-side routing)
+- CSS (custom design system, no UI library)
+- Google Fonts — Syne + DM Mono + DM Sans
 
-Getting Started
-Prerequisites
+**Backend**
+- Node.js + Express
+- REST API serving portfolio data
+- Nodemailer (contact form)
+- CORS enabled for cross-origin requests
 
-Node.js v16+
-npm
+---
 
-Installation
-bash# Clone the repository
+## Getting Started
+
+### Prerequisites
+- Node.js v16+
+- npm
+
+### Installation
+
+```bash
+# Clone the repository
 git clone https://github.com/Udhaychander/portfolio.git
 cd portfolio
 
@@ -42,17 +69,29 @@ npm install
 # Install client dependencies
 cd ../client
 npm install
-Running Locally
-Terminal 1 — Start the backend server
-bashcd server
+```
+
+### Running Locally
+
+**Terminal 1 — Start the backend server**
+```bash
+cd server
 PORT=3001 node index.js
 # Server running at http://localhost:3001
-Terminal 2 — Start the React app
-bashcd client
+```
+
+**Terminal 2 — Start the React app**
+```bash
+cd client
 npm start
 # App running at http://localhost:3000
+```
 
-Project Structure
+---
+
+## Project Structure
+
+```
 portfolio/
 ├── server/
 │   ├── index.js          # Express server + REST API + portfolio data
@@ -74,14 +113,34 @@ portfolio/
 │       ├── App.js
 │       └── index.js
 └── README.md
+```
 
-API Endpoints
-MethodEndpointDescriptionGET/api/portfolioFull portfolio dataGET/api/experienceWork experienceGET/api/projectsProjectsGET/api/educationEducationGET/api/skillsSkillsPOST/api/contactContact form submission
+---
 
-Contact
-Udhay Chander Bharatha
+## API Endpoints
 
-📧 bharathaudhay@gmail.com
-💼 linkedin.com/in/udhay-chander-bharatha
-🐙 github.com/Udhaychander
-📍 Chicago, IL
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/api/portfolio` | Full portfolio data |
+| `GET` | `/api/experience` | Work experience |
+| `GET` | `/api/projects` | Projects |
+| `GET` | `/api/education` | Education |
+| `GET` | `/api/skills` | Skills |
+| `POST` | `/api/contact` | Contact form submission |
+
+---
+
+## Contact
+
+**Udhay Chander Bharatha**
+
+- 📧 [bharathaudhay@gmail.com](mailto:bharathaudhay@gmail.com)
+- 💼 [linkedin.com/in/udhay-chander-bharatha](https://www.linkedin.com/in/udhay-chander-bharatha)
+- 🐙 [github.com/Udhaychander](https://github.com/Udhaychander)
+- 📍 Chicago, IL
+
+---
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
