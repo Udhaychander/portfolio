@@ -12,7 +12,7 @@
 
 ## 🌐 Live Demo
 
-### **[https://udhay-portfolio.vercel.app](https://udhay-portfolio.vercel.app)**
+### **[https://udhay-portfolio-two.vercel.app/](https://udhay-portfolio-two.vercel.app/)**
 
 > Frontend hosted on Vercel · Backend hosted on Render
 
