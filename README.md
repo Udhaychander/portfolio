@@ -6,12 +6,15 @@
 ![Node.js](https://img.shields.io/badge/Node.js-Express-339933?style=flat&logo=node.js&logoColor=white)
 ![React Router](https://img.shields.io/badge/React_Router-6-CA4245?style=flat&logo=react-router&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-yellow?style=flat)
+![Status](https://img.shields.io/badge/Status-Live-brightgreen?style=flat)
 
 ---
 
-## Live Demo
+## 🌐 Live Demo
 
-🌐 **[udhaychander.vercel.app](https://udhaychander.vercel.app)**
+### **[https://udhay-portfolio.vercel.app](https://udhay-portfolio.vercel.app)**
+
+> Frontend hosted on Vercel · Backend hosted on Render
 
 ---
 
@@ -46,6 +49,10 @@ A full-stack portfolio showcasing my experience, projects, and skills as a Softw
 - REST API serving portfolio data
 - Nodemailer (contact form)
 - CORS enabled for cross-origin requests
+
+**Deployed On**
+- Frontend → [Vercel](https://vercel.com)
+- Backend → [Render](https://render.com)
 
 ---
 
