@@ -1,74 +1,87 @@
-# Udhay Chander Bharatha — Portfolio v2
+Udhay Chander Bharatha — Portfolio
 
-Multi-page portfolio built with **React** (frontend) + **Node.js/Express** (backend).
+Personal portfolio website built with React & Node.js/Express
 
-## Pages
-- `/` — Home: Hero, stats, featured projects, skills preview, CTA
-- `/experience` — Interactive tabbed work history with timeline
-- `/projects` — Filterable project cards with expandable detail
-- `/education` — Degrees + full skills breakdown
-- `/contact` — Contact form with subject picker + availability badge
+About
+A full-stack portfolio showcasing my experience, projects, and skills as a Software Engineer. Built with a React frontend and a Node.js/Express backend serving portfolio data via REST API.
 
-## Quick Start
+Pages
+RouteDescription/Hero, stats, featured projects, skills overview/experienceInteractive work history with tabbed timeline/projectsFilterable project cards with expandable details/educationAcademic background and full skills breakdown/contactContact form with live backend submission
 
-```bash
-# 1. Install all dependencies
-npm run install-all
+Tech Stack
+Frontend
 
-# 2. Start server (Terminal 1)
+React 18
+React Router v6 (client-side routing)
+CSS (custom design system, no UI library)
+Google Fonts — Syne + DM Mono + DM Sans
+
+Backend
+
+Node.js + Express
+REST API serving portfolio data
+Nodemailer (contact form)
+CORS enabled for cross-origin requests
+
+
+Getting Started
+Prerequisites
+
+Node.js v16+
+npm
+
+Installation
+bash# Clone the repository
+git clone https://github.com/Udhaychander/portfolio.git
+cd portfolio
+
+# Install server dependencies
 cd server
-node index.js
-# ✅ Server → http://localhost:5000
+npm install
 
-# 3. Start React (Terminal 2)
-cd client
+# Install client dependencies
+cd ../client
+npm install
+Running Locally
+Terminal 1 — Start the backend server
+bashcd server
+PORT=3001 node index.js
+# Server running at http://localhost:3001
+Terminal 2 — Start the React app
+bashcd client
 npm start
-# Opens http://localhost:3000
-```
+# App running at http://localhost:3000
 
-## Project Structure
-```
-portfolio-v2/
+Project Structure
+portfolio/
 ├── server/
-│   ├── index.js        ← Express API + all portfolio data
+│   ├── index.js          # Express server + REST API + portfolio data
 │   └── package.json
 ├── client/
 │   ├── public/
 │   │   └── index.html
-│   ├── src/
-│   │   ├── pages/
-│   │   │   ├── Home.js / Home.css
-│   │   │   ├── Experience.js / Experience.css
-│   │   │   ├── Projects.js / Projects.css
-│   │   │   ├── Education.js / Education.css
-│   │   │   └── Contact.js / Contact.css
-│   │   ├── components/
-│   │   │   ├── Navbar.js / Navbar.css
-│   │   ├── hooks/
-│   │   │   └── usePortfolio.js
-│   │   ├── App.js
-│   │   ├── index.js
-│   │   └── index.css
-│   └── package.json
-└── package.json
-```
+│   └── src/
+│       ├── pages/
+│       │   ├── Home.js
+│       │   ├── Experience.js
+│       │   ├── Projects.js
+│       │   ├── Education.js
+│       │   └── Contact.js
+│       ├── components/
+│       │   └── Navbar.js
+│       ├── hooks/
+│       │   └── usePortfolio.js   # API data fetching hook
+│       ├── App.js
+│       └── index.js
+└── README.md
 
-## Update Your Data
-All your portfolio data is in ONE place: `server/index.js` → the `data` object at the top.
-Change it there and everything updates instantly.
+API Endpoints
+MethodEndpointDescriptionGET/api/portfolioFull portfolio dataGET/api/experienceWork experienceGET/api/projectsProjectsGET/api/educationEducationGET/api/skillsSkillsPOST/api/contactContact form submission
 
-## Enable Contact Emails (Free)
-1. Create Gmail App Password at https://myaccount.google.com/apppasswords
-2. Create `server/.env`: `EMAIL_USER=bharathaudhay@gmail.com` and `EMAIL_PASS=your_app_password`
-3. Uncomment the nodemailer block in `server/index.js`
+Contact
+Udhay Chander Bharatha
 
-## Free Deployment
-
-### Frontend → Vercel
-- Push `client/` to GitHub
-- Import at vercel.com → Build: `npm run build`, Output: `build`
-
-### Backend → Render
-- Push `server/` to GitHub  
-- New Web Service at render.com → Start: `node index.js`
-- Copy Render URL and set env var in Vercel: `REACT_APP_API_URL=https://your-app.onrender.com`
+📧 bharathaudhay@gmail.com
+💼 linkedin.com/in/udhay-chander-bharatha
+🐙 github.com/Udhaychander
+📍 Chicago, IL
