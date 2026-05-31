@@ -10,7 +10,7 @@
 
 ---
 
-## 🌐 Live Demo
+## 🌐 Live Link
 
 ### **[https://udhay-portfolio-two.vercel.app/](https://udhay-portfolio-two.vercel.app/)**
 
