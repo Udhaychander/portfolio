@@ -35,10 +35,42 @@ export default function Home({ data }) {
               <a href={`mailto:${data.email}`}>{data.email}</a>
             </div>
           </div>
+
           <div className="hero-visual">
             <div className="avatar-ring">
               <div className="avatar-inner">
-                <span>{data.initials}</span>
+                <img
+                  src="/profile.jpg"
+                  alt="Udhay Chander Bharatha"
+                  onError={(e) => {
+                    // Fallback to initials if image not found
+                    e.target.style.display = "none";
+                    e.target.nextSibling.style.display = "flex";
+                  }}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    borderRadius: "50%",
+                    objectFit: "cover",
+                    objectPosition: "center top",
+                    display: "block"
+                  }}
+                />
+                <span
+                  style={{
+                    display: "none",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "100%",
+                    height: "100%",
+                    fontSize: "3rem",
+                    fontFamily: "var(--font-display)",
+                    fontWeight: 800,
+                    color: "var(--accent)"
+                  }}
+                >
+                  {data.initials}
+                </span>
               </div>
             </div>
             <div className="hero-badge hero-badge-1">
