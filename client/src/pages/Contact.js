@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { sendContact } from "../hooks/usePortfolio";
 import "./Contact.css";
 
 const SUBJECTS = [
@@ -21,17 +20,43 @@ export default function Contact({ data }) {
     e.preventDefault();
     setLoading(true);
     setStatus(null);
+
     try {
-      const res = await sendContact(form);
-      if (res.success) {
-        setStatus({ type: "success", msg: res.message });
+      const res = await fetch("https://formspree.io/f/xlgkdwdn", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          subject: form.subject,
+          message: form.message
+        })
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setStatus({
+          type: "success",
+          msg: "Message sent! I'll get back to you within 24 hours."
+        });
         setForm({ name: "", email: "", subject: "", message: "" });
       } else {
-        setStatus({ type: "error", msg: res.error || "Something went wrong." });
+        setStatus({
+          type: "error",
+          msg: data.error || "Something went wrong. Please try again."
+        });
       }
     } catch {
-      setStatus({ type: "error", msg: "Server unreachable. Please email me directly." });
+      setStatus({
+        type: "error",
+        msg: "Network error. Please email me directly at bharathaudhay@gmail.com"
+      });
     }
+
     setLoading(false);
   };
 
