@@ -81,13 +81,6 @@ export default function Contact({ data }) {
                   <p className="ci-val">{data.email}</p>
                 </div>
               </a>
-              <a href={`tel:${data.phone.replace(/-/g, "")}`} className="contact-item">
-                <div className="ci-icon">☏</div>
-                <div>
-                  <p className="ci-label">Phone</p>
-                  <p className="ci-val">{data.phone}</p>
-                </div>
-              </a>
               <div className="contact-item">
                 <div className="ci-icon">📍</div>
                 <div>
